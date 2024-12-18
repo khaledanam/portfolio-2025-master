@@ -6,7 +6,7 @@ function Skills() {
     <section className="skills">
       <h2 className="skills-header">My Skills</h2>
       <p className="skills-subheader">
-        A quick overview of my technical expertise and certifications.
+        An overview of my technical expertise, skills and certifications.
       </p>
 
       {/* Skills Section */}
@@ -14,25 +14,25 @@ function Skills() {
 
 {/* Networking & Hardware */}
 <div className="skills-category">
-          <h3>Networking & Hardware</h3>
+          <h3>Networking</h3>
           <ul>
-            <li>Router Configuration</li>
-            <li>Network Troubleshooting</li>
-            <li>Hardware Repair & Maintenance</li>
-            <li>LAN/WAN Management</li>
+            <li>Routing Protocols: Configure RIP, EIGRP, OSPF, and BGP for dynamic routing.</li>
+           <li> Design LAN/WAN setups and interconnect branch offices.</li>
+            <li>Configure static routes and troubleshoot routing issues.</li>
+            <li>Set up VLANs, NAT, and inter-VLAN routing on switches and routers.</li>
           </ul>
         </div>
 
-        {/* Certifications */}
-        <div className="skills-category">
-          <h3>Certifications</h3>
+{/* Hardware and IT Support */}
+<div className="skills-category">
+          <h3>Hardware and IT Support</h3>
           <ul>
-            <li>CCNA</li>
-            <li>CompTIA A+</li>
-            <li>Microsoft Office Management</li>
-            
+            <li>Repair PCs/laptops and upgrade hardware.</li>
+           <li> Install and configure operating systems like Windows/Linux.</li>
+            <li>Provide technical support for network devices like routers and switches.</li>
           </ul>
         </div>
+
 
         {/* Tools & Frameworks */}
         <div className="skills-category">
@@ -54,7 +54,18 @@ function Skills() {
             <li>HTML & CSS</li>
           </ul>
         </div>
-        
+
+ {/* Certifications */}
+          <div className="skills-category">
+          <h3>Certifications</h3>
+          <ul>
+            <li>CCNA</li>
+            <li>CompTIA A+</li>
+            <li>Microsoft Office Management</li>
+            
+          </ul>
+        </div>
+
       </div>
     </section>
   );
