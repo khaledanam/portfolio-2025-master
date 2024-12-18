@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #1f2b6c, #4b6cb7);
+  color: white;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  flex-wrap: wrap; /* Ensure header elements wrap on smaller screens */
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allow links to wrap */
+  justify-content: center; /* Center align links on smaller screens */
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-download {
+  background-color: #ff5757;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+  flex-wrap: wrap; /* Wrap content on smaller screens */
+  text-align: center; /* Center-align for smaller screens */
+}
+
+.hero .content {
+  max-width: 50%;
+  flex-basis: 100%; /* Allow full width on smaller screens */
+}
+
+.hero h2 {
+  font-weight: 300;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero h3 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.hero p {
+
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.hero .image {
+  margin-top: 2rem; /* Add space for smaller screens */
+  position: relative;
+  text-align: center; /* Center the image */
+}
+
+.hero .image img {
+  border-radius: 10px;
+  max-width: 350px; /* Make image responsive */
+  height: auto;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #16213e;
+  color: #ccc;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+footer .social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+footer .social-icon:hover {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .hero .content {
+    max-width: 100%; /* Full width on smaller screens */
+    margin-bottom: 2rem; /* Add spacing */
+  }
+
+  header nav {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .hero h3 {
+    font-size: 1.2rem; /* Adjust subheading size */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Adjust paragraph font size */
+   
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem; /* Further reduce heading size */
+  }
+
+  .hero h3 {
+    font-size: 1rem; /* Adjust for small screens */
+  }
+
+  .btn-download {
+    padding: 0.5rem 0.8rem; /* Reduce button padding */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}

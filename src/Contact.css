@@ -1,0 +1,114 @@
+.contact {
+  background-color: #f4f4f9;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-subheader {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Contact Info at the top, left-aligned */
+.contact-info {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.contact-details {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd; /* Soft border to match the theme */
+  border-radius: 8px;
+  background-color: #ffffff; /* Ensures clear readability */
+  display: flex;
+  align-items: center;
+  word-wrap: break-word; /* Prevents long email text from overflowing */
+  overflow-wrap: break-word; /* Ensures proper wrapping on all browsers */
+}
+
+.contact-details a {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 8px;
+  flex-grow: 1; /* Ensures the link spans evenly */
+  word-break: break-word; /* Handles very long words or URLs */
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.contact-details svg {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #555; /* Subtle color for icons */
+}
+
+/* Contact Form positioned at the bottom */
+.contact-form-container {
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none; /* Prevent resizing of textarea */
+  max-width: 100%; /* Ensures input fields don't exceed container width */
+}
+
+.contact-form textarea {
+  max-height: 150px; /* Optional: Limit the height of textarea */
+  height: 100px; /* Default height */
+}
+
+.contact-form button {
+  padding: 1rem;
+  background-color: #0077f7;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-details {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    flex-wrap: wrap; /* Wrap content to stay inside the container */
+    padding: 0.5rem; /* Reduce padding */
+  }
+
+  .contact-form {
+    padding: 0 1rem; /* Add some horizontal padding for small screens */
+  }
+
+  .contact-form textarea {
+    height: 120px; /* Slightly larger height for smaller screens */
+  }
+}
