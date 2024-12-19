@@ -38,6 +38,9 @@ function Skills() {
         <div className="skills-category">
           <h3>Tools & Frameworks</h3>
           <ul>
+          <li>Cisco Packet Tracer</li>
+          <li>Mikrotik RouterOS</li>
+          <li>Kali Linux</li>
             <li>React.js</li>
             <li>Node.js</li>
             <li>Blockchain</li>

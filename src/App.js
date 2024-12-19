@@ -6,6 +6,7 @@ import profile from "./assets/profile.jpg";
 import Services from "./Services";
 import Skills from "./Skills"; 
 import Contact from "./Contact";
+import Projects from "./Projects"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <a href="/skills">Skills</a>
             <a href="/services">Services</a>
             <a href="/contact">Contact</a>
+            <a href="/Projects">Projects</a>
             <button className="btn-download"><a href="https://drive.google.com/file/d/1bMIRbyq5K6ziJzfp8Q-FyGCoWGcMadts/view?usp=drive_link"target="_blank"> View CV </a></button>
           </nav>
         </header>
@@ -49,6 +51,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/Projects" element={<Projects />} />
         </Routes>
 
         {/* Footer Section */}

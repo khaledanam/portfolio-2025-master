@@ -1,0 +1,47 @@
+/* Projects Section */
+.Projects {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to right, #2c3e50, #4b6cb7);
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .Projects-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .service-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 300px;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .service-card:hover {
+    background: #ff5757;
+    transform: translateY(-10px);
+  }
+  
