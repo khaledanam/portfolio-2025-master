@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa"; // Import icons from react-icons
+import { FaLinkedinIn, FaGithub } from "react-icons/fa"; 
 import "./App.css";
 import profile from "./assets/profile.jpg";
 import Services from "./Services";

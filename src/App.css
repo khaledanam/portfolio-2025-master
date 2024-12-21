@@ -17,6 +17,8 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 1rem;
+  position: relative; 
+  top: -20px; 
 }
 
 header {
@@ -24,7 +26,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  flex-wrap: wrap; /* Ensure header elements wrap on smaller screens */
+  flex-wrap: wrap; 
 }
 
 header .logo {
@@ -35,8 +37,8 @@ header .logo {
 header nav {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap; /* Allow links to wrap */
-  justify-content: center; /* Center align links on smaller screens */
+  flex-wrap: wrap; 
+  justify-content: center; 
 }
 
 header nav a {
@@ -59,14 +61,13 @@ header nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 0;
-  flex-wrap: wrap; /* Wrap content on smaller screens */
-  text-align: center; /* Center-align for smaller screens */
+  padding: 3rem 0; 
+  flex-wrap: wrap; 
+  text-align: center; 
 }
-
 .hero .content {
   max-width: 50%;
-  flex-basis: 100%; /* Allow full width on smaller screens */
+  flex-basis: 100%; 
 }
 
 .hero h2 {
@@ -90,18 +91,18 @@ header nav a {
 }
 
 .hero .image {
-  margin-top: 2rem; /* Add space for smaller screens */
+  margin-top: 2rem; 
   position: relative;
-  text-align: center; /* Center the image */
+  text-align: center; 
 }
 
 .hero .image img {
   border-radius: 10px;
-  max-width: 350px; /* Make image responsive */
+  max-width: 350px; 
   height: auto;
 }
 
-/* Footer Styles */
+
 footer {
   background-color: #16213e;
   color: #ccc;
@@ -141,6 +142,7 @@ footer p {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column; /* Stack content vertically */
+    padding: 2rem 0; /* Further reduce padding for smaller screens */
   }
 
   .hero .content {
