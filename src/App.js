@@ -118,7 +118,7 @@ function App() {
             <a href="/services">Services</a>
             <a href="/contact">Contact</a>
             <a href="/projects">Projects</a>
-            <a href="/dashboard">Dashboard</a>
+            {/* <a href="/dashboard">Dashboard</a> */}
             <button className="btn-download">
               <a
                 href="https://drive.google.com/file/d/1bMIRbyq5K6ziJzfp8Q-FyGCoWGcMadts/view?usp=drive_link"
