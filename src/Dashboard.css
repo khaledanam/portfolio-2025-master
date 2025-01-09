@@ -1,0 +1,91 @@
+/* Make the dashboard responsive */
+.dashboard {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    height: 100vh; /* Take full viewport height */
+    width: 100%; 
+}
+
+@media (min-width: 768px) {
+    .dashboard {
+        flex-direction: row; /* Side by side on larger screens */
+    }
+}
+
+.sidebar {
+    width: 100%; /* Full width on small screens */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    position: relative; /* Adjust position to avoid overlapping */
+    top: 0;
+    bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        width: 250px; /* Fixed width on larger screens */
+    }
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar li:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar li.active {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff4545;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+    padding: 20px;
+    width: 100%; /* Full width on small screens */
+    overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        width: calc(100% - 250px); /* Adjust width on larger screens */
+    }
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
