@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "./firebaseconfig"; // Adjust the path if necessary
+import { useEffect } from "react";
 
 function Dashboard({ data, handleDataChange }) {
   const [inputData, setInputData] = useState(data);
@@ -16,10 +19,63 @@ function Dashboard({ data, handleDataChange }) {
     }));
   };
 
-  const handleSubmit = (e, section) => {
-    e.preventDefault();
-    handleDataChange(section, inputData[section]);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const docRef = doc(db, "dashboard", activeSection);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setInputData(prevState => ({
+            ...prevState,
+            [activeSection]: docSnap.data(),
+          }));
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+    fetchData();
+  }, [activeSection]);
+
+  // const handleSubmit = (e, section) => {
+  //   e.preventDefault();
+  //   handleDataChange(section, inputData[section]);
+  // };
+
+// const handleSubmit = async (e, section) => {
+//   e.preventDefault();
+//   try {
+//     // await setDoc(doc(db, "dashboard", section), inputData[section]);
+//     console.log(`${section} data saved successfully`);
+//   } catch (error) {
+//     console.error("Error saving data: ", error);
+//   }
+// };
+
+const handleSubmit = async (e, section) => {
+  e.preventDefault();
+
+  // Extract the section data
+  const sectionData = inputData[section];
+
+  // Check for empty fields
+  const hasEmptyFields = Object.values(sectionData).some(value => value === '' || value === undefined);
+
+  if (hasEmptyFields) {
+    alert("All fields are required. Please fill out all fields before submitting.");
+    return;
+  }
+
+  try {
+    // Save the data (uncomment the actual saving line when needed)
+    // await setDoc(doc(db, "dashboard", section), sectionData);
+    console.log(`${section} data saved successfully`);
+  } catch (error) {
+    console.error("Error saving data: ", error);
+  }
+};
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
@@ -212,8 +268,6 @@ function Dashboard({ data, handleDataChange }) {
     />
   </>
 )}
-
-
           <button type="submit">{`Save ${activeSection.charAt(0).toUpperCase() + activeSection.slice(1)} Section`}</button>
         </form>
       </div>
